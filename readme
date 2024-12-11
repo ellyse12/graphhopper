@@ -1,0 +1,7 @@
+Description:
+MapService: This service receives map data from an external source and processes this data to make it available for route calculation.
+RoutingService: This service receives map data using MapService and DataAccessService, processes it and calculates the shortest route. It saves the calculated route to the database.
+DataAccessService: This service provides access to the database (or another data store). Map data and route calculations are saved to the database.
+Testability:
+Since MapService and RoutingService are independent, it is easier to write unit tests.
+Integration tests with the database can also be performed for DataAccessService.
